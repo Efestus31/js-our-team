@@ -59,7 +59,7 @@ function generate_team_member_card(member) {
     const {name, role, email, img} = member
 
     return `
-    <div class="col">
+    <div class="col-12 col-lg-4 col-md-6 col-sm-12">
             <div class="card mt-5" style="width: 22rem;">
                 <img src="${img}" class="card-img-top" alt="Team Member picture">
                 <div class="card-body">
