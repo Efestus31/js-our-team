@@ -1,13 +1,13 @@
 .card img {
-    max-width: 25%;
-    margin: auto;
-    padding: 0.5em;
+    max-width: 40%;
+    
     border-radius: 0.7em;
   }
   .card {
     flex-direction: row;
   }
   .card {
+    max-height: fit-content;
     border: 0;
     background-color: #000000;
     color: #fff;
