@@ -44,6 +44,7 @@ const teamEl = document.getElementById('team');
 const formEl = document.querySelector('form')
 
 
+
 let definitiveMarkup = '';
 //Elaborazione dati
 for (let i = 0; i < teamMembers.length; i++) {
@@ -100,9 +101,9 @@ formEl.addEventListener('submit', (e) =>{
         img
     }
 
-    const markup = generate_team_member_card(new_member)
+    const markup = generate_team_member_card(new_member);
 
-    teamEl.insertAdjacentHTML('beforeend', markup)
+    teamEl.insertAdjacentHTML('beforeend', markup);
 
 });
 
