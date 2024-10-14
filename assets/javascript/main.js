@@ -41,6 +41,9 @@ const teamMembers = [
 const teamEl = document.getElementById('team');
 
 
+const formEl = document.querySelector('form')
+
+
 let definitiveMarkup = '';
 //Elaborazione dati
 for (let i = 0; i < teamMembers.length; i++) {
@@ -53,7 +56,7 @@ definitiveMarkup += markup;
 
 }
 
-
+//print into the document
 function generate_team_member_card(member) {
 
     const {name, role, email, img} = member
@@ -71,7 +74,37 @@ function generate_team_member_card(member) {
                  </div>
             </div>
      </div>
-    `
+    `;
 }
 
-teamEl.innerHTML = definitiveMarkup
+teamEl.innerHTML = definitiveMarkup;
+//funzione che interagisce con il form in pagina
+formEl.addEventListener('submit', (e) =>{
+    e.preventDefault();
+
+    //recupera il valore dell' input name
+    let name = document.getElementById('name').value
+    //recupera il valore dell' input role
+    let role = document.getElementById('role').value
+
+    //recupera il valore dell' input email
+    let email = document.getElementById('email').value
+    //recupera il valore dell' input image
+    let img = document.getElementById('image').value
+
+    //ricreiamo un oggetto per il nuovo membro
+    const new_member = {
+        name,
+        role,
+        email,
+        img
+    }
+
+    const markup = generate_team_member_card(new_member)
+
+    teamEl.insertAdjacentHTML('beforeend', markup)
+
+});
+
+
+
