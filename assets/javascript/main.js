@@ -36,3 +36,14 @@ const teamMembers = [
       img: "img/female3.png"
     }
   ];
+
+  //selezioniamo gli elementi nella DOM
+  const teamEl = document.getElementById('team');
+
+  //Elaborazione dati
+  for(let i = 0; i < teamMembers.length; i++){
+
+    const member = team[i]
+
+
+  }
