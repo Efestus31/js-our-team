@@ -60,12 +60,12 @@ function generate_team_member_card(member) {
 
     return `
     <div class="col">
-            <div class="card mb-5" style="width: 18rem;">
+            <div class="card mt-5" style="width: 22rem;">
                 <img src="${img}" class="card-img-top" alt="Team Member picture">
                 <div class="card-body">
                     <div class="text-section">
                         <h5 class="card-title fw-bold">${name}</h5>
-                        <p class="card-text">${role}</p>
+                        <p class="card-text fs-6">${role}</p>
                         <a href="">${email}</a>
                     </div>
                  </div>
